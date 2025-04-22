@@ -156,9 +156,26 @@
         const divSelecionada = document.getElementById(selecionado);
         if (divSelecionada) {
           divSelecionada.style.display = 'block';
+          <script>
+  function mostrarConstrucao() {
+    var opcoes = document.querySelectorAll('.content');
+    opcoes.forEach(function(div) {
+      div.style.display = 'none';
+    });
+
+    var selecao = document.getElementById('construcao').value;
+    if (selecao) {
+      var conteudo = document.getElementById(selecao);
+      if (conteudo) {
+        conteudo.style.display = 'block';
+      }
+    }
+  }
+</script>
         }
       }
     }
+    
   </script>
 </body>
 </html>
